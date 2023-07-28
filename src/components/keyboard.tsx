@@ -22,7 +22,7 @@ export const ACTIONS = {
 }
 
 interface KeyBoardProps {
-  onPress: (type: string, value?: string) => any;
+  onPress: (type: string, value?: string | any) => any;
 }
 
 const KeyBoard: FC<KeyBoardProps> = ({ onPress }) => {

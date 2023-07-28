@@ -1,20 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { withExpoSnack } from "nativewind";
+import { CalculatorProvider } from "./src/context/calculator";
+import Views from "./src/views";
 
-export default function App() {
+
+export default withExpoSnack(function () {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    <CalculatorProvider>
+      <Views/>
+    </CalculatorProvider>
+  )
+})
